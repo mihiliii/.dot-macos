@@ -1,4 +1,5 @@
 # If you come from bash you might have to change your $PATH.
+typeset -U path
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
@@ -129,3 +130,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
+
+alias vim='nvim'
+alias hosts='nvim ~/.ssh/config'
+
+export PATH=$PATH:/Users/mihajlo.pavlovic/.spicetify
+export PATH="$HOME/.config/scripts:$PATH"

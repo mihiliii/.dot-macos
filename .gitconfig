@@ -11,3 +11,9 @@
 	email = 115306746+mihiliii@users.noreply.github.com
 [credential]
 	helper = /opt/homebrew/bin/gh auth git-credential
+[core]
+	editor = nvim
+[push]
+	default = current
+[pull]
+	rebase = true
