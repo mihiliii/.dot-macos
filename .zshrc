@@ -18,7 +18,7 @@ ZSH_THEME=""
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -33,7 +33,7 @@ ZSH_THEME=""
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -71,14 +71,11 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(history git zsh-autosuggestions zsh-syntax-highlighting docker fzf aliases zoxide eza)
+plugins=(history git zsh-autosuggestions zsh-syntax-highlighting docker fzf)
 
 source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -104,7 +101,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# If you're using macOS, you'll want this enabled
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
@@ -113,11 +109,8 @@ HISTSIZE=50000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 
-export EDITOR='nvim'
-export VISUAL='nvim'
-export XDG_CONFIG_HOME="$HOME/.config"
-
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 if command -v eza &> /dev/null; then
   alias ls='eza -lh --group-directories-first --icons=auto'
@@ -134,5 +127,8 @@ alias .....='cd ../../../..'
 alias vim='nvim'
 alias hosts='nvim ~/.ssh/config'
 
-export PATH=$PATH:/Users/mihajlo.pavlovic/.spicetify
 export PATH="$HOME/.config/scripts:$PATH"
+export EDITOR='nvim'
+export VISUAL='nvim'
+export XDG_CONFIG_HOME="$HOME/.config"
+export LANG=en_US.UTF-8

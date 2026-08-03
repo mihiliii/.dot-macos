@@ -2,3 +2,4 @@ theme = Catppuccin Macchiato
 background-opacity = 0.9
 background-blur = true
 confirm-close-surface = false
+font-size = 16.0
