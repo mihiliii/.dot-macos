@@ -127,7 +127,7 @@ alias .....='cd ../../../..'
 alias vim='nvim'
 alias hosts='nvim ~/.ssh/config'
 
-export PATH="$HOME/.config/scripts:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export EDITOR='nvim'
 export VISUAL='nvim'
 export XDG_CONFIG_HOME="$HOME/.config"
