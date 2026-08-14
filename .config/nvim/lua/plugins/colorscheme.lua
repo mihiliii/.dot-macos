@@ -5,7 +5,7 @@ return {
     name = "catppuccin",
     opts = {
       flavour = "macchiato",
-      transparent_background = true,
+      transparent_background = false,
       auto_integrations = true,
     },
   },
